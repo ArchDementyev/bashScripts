@@ -35,8 +35,5 @@ iptables -A INPUT -p icmp --icmp-type echo-request -j ACCEPT
 
 # 6. Сохранение правил (зависит от вашего дистрибутива)
 # Для Ubuntu/Debian требуется пакет iptables-persistent:
-# sudo apt install iptables-persistent
-# netfilter-persistent save
-
-# Для CentOS/RHEL/Fedora:
-# service iptables save
+ sudo apt install iptables-persistent
+ netfilter-persistent save
