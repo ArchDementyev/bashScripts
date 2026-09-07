@@ -23,7 +23,6 @@ iptables -A OUTPUT -o lo -j ACCEPT
 iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 
 # 5. РАЗРЕШЕННЫЕ ВХОДЯЩИЕ ПОРТЫ (Настройте под себя)
-
 # Разрешить SSH (По умолчанию порт 22. Если вы его изменили, укажите ваш порт)
 iptables -A INPUT -p tcp --dport 22 -m conntrack --ctstate NEW -j ACCEPT
 
